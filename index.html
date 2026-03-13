@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Chetnath | Sahu Dev-Labs - Linux & Web Expert</title>
+    
+    <meta name="description" content="Portfolio of Chetnath (Sahu Dev-Labs). Expert in Kali NetHunter, Termux, and Modern Web Development. Learn Linux step-by-step.">
+    <meta name="keywords" content="Sahu Dev-Labs, Chetnath, Linux, Termux, NetHunter, Ubuntu Installation, Web Developer India">
+    <meta name="author" content="Chetnath">
+    
+    <meta property="og:title" content="Chetnath | Sahu Dev-Labs">
+    <meta property="og:description" content="Master Mobile Linux and Web Development with step-by-step guides.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/906/906324.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+<body class="dark-theme">
+
+    <div id="loader"></div>
+
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">Sahu<span>Dev-Labs</span></div>
+            <div class="nav-right">
+                <ul class="nav-links" id="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#linux-hub">Linux Hub</a></li>
+                    <li><a href="#projects">Work</a></li>
+                    <li><i class="fas fa-moon" id="theme-toggle"></i></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <p class="pre-title">Welcome to the Zone</p>
+                <h1 class="reveal">I'm <span class="highlight">Chetnath</span></h1>
+                <h3>Expert in <span id="typing-text"></span></h3>
+                <p class="hero-desc">Mobile Linux Enthusiast aur Developer. Main complex tech ko simple banata hoon.</p>
+                <div class="hero-btns">
+                    <a href="#linux-hub" class="btn primary">Get Started</a>
+                    <a href="#contact" class="btn secondary">Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="linux-hub" class="linux-section">
+        <div class="container">
+            <h2 class="section-title reveal">Linux <span>Documentation</span> Hub</h2>
+            
+            <div class="search-box reveal">
+                <input type="text" id="linux-search" placeholder="Type to search (e.g. Kali, Ubuntu)..." onkeyup="searchLinux()">
+                <i class="fas fa-search"></i>
+            </div>
+            
+            <div class="linux-grid">
+                <div class="linux-card searchable" data-keyword="ubuntu installation termux proot" onclick="toggleGuide('ubuntu-guide')">
+                    <div class="card-tag">Popular</div>
+                    <i class="fab fa-ubuntu card-icon"></i>
+                    <h3>Ubuntu OS</h3>
+                    <p>Full installation for Termux PRoot environment.</p>
+                </div>
+
+                <div class="linux-card searchable" data-keyword="nethunter desktop kex kali gui" onclick="toggleGuide('nethunter-guide')">
+                    <div class="card-tag">Advanced</div>
+                    <i class="fas fa-dragon card-icon"></i>
+                    <h3>Kali NetHunter</h3>
+                    <p>Setup Desktop GUI (KeX) on your Android device.</p>
+                </div>
+            </div>
+
+            <div id="ubuntu-guide" class="guide-details">
+                <div class="guide-nav">
+                    <h4>Ubuntu Installation Steps</h4>
+                    <button class="close-btn" onclick="event.stopPropagation(); toggleGuide('ubuntu-guide')">&times;</button>
+                </div>
+                <div class="step-box">
+                    <p>1. Update System</p>
+                    <div class="code-area">
+                        <span class="cmd">pkg update && pkg upgrade -y</span>
+                        <button onclick="copyCmd(this)"><i class="far fa-copy"></i></button>
+                    </div>
+                    <p>2. Install Ubuntu</p>
+                    <div class="code-area">
+                        <span class="cmd">proot-distro install ubuntu</span>
+                        <button onclick="copyCmd(this)"><i class="far fa-copy"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="nethunter-guide" class="guide-details">
+                <div class="guide-nav">
+                    <h4>Kali NetHunter KeX Setup</h4>
+                    <button class="close-btn" onclick="event.stopPropagation(); toggleGuide('nethunter-guide')">&times;</button>
+                </div>
+                <div class="step-box">
+                    <p>1. Download Script</p>
+                    <div class="code-area">
+                        <span class="cmd">wget -O install-nethunter-termux https://offs.ec/2Mdg3Zf</span>
+                        <button onclick="copyCmd(this)"><i class="far fa-copy"></i></button>
+                    </div>
+                    <p>2. Launch Desktop</p>
+                    <div class="code-area">
+                        <span class="cmd">nh kex &</span>
+                        <button onclick="copyCmd(this)"><i class="far fa-copy"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section reveal">
+    <div class="container">
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <p class="section-subtitle">Koi sawal hai ya collab karna chahte ho? Seedha message bhejo!</p>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email Me</h4>
+                        <p>your-email@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fab fa-youtube"></i>
+                    <div>
+                        <h4>YouTube</h4>
+                        <p>Sahu Dev-Labs</p>
+                    </div>
+                </div>
+            </div>
+
+            <form action="https://formspree.io/f/your-id" method="POST" class="contact-form">
+                <div class="input-group">
+                    <input type="text" name="name" placeholder="Aapka Naam" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-group">
+                    <textarea name="message" rows="5" placeholder="Aapka Message yahan likhein..." required></textarea>
+                </div>
+                <button type="submit" class="btn primary full-width">Send Message <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Sahu<span>Dev-Labs</span></h3>
+                    <p>Coding aur Linux ko aasan banane ka mission.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#linux-hub">Tutorials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Me</h4>
+                    <div class="social-icons">
+                        <a href="https://github.com/Dark-Soulx" target="_blank" class="s-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://youtube.com/@SahuDevLabs" target="_blank" class="s-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="s-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Sahu Dev-Labs | Built with <i class="fas fa-heart" style="color:red"></i> by Chetnath
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
