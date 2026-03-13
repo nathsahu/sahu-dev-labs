@@ -30,10 +30,3 @@ This website serves as a central hub for **Chetnath (Sahu Dev-Labs)**. It featur
 
 ---
 
-## 📂 Project Structure
-```text
-Sahu-Dev-Labs/
-├── index.html       # Main structure & SEO Meta Tags
-├── style.css        # Professional styling & animations
-├── script.js        # Core logic & UI interactions
-└── assets/          # (Optional) Store your images & icons here
